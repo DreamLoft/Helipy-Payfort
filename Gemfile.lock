@@ -75,6 +75,7 @@ GEM
     payfort_start (0.0.6)
       httparty (~> 0.13)
       json (~> 1.8)
+    pg (0.21.0)
     puma (3.9.1)
     rack (2.0.3)
     rack-test (0.6.3)
@@ -141,6 +142,7 @@ DEPENDENCIES
   firebase (~> 0.2.6)
   listen (>= 3.0.5, < 3.2)
   payfort_start
+  pg
   puma (~> 3.7)
   rails (~> 5.1.2)
   rails_12factor
@@ -148,6 +150,9 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   sqlite3
   tzinfo-data
+
+RUBY VERSION
+   ruby 2.3.1p112
 
 BUNDLED WITH
    1.14.6
