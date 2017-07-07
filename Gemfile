@@ -24,6 +24,9 @@ gem 'puma', '~> 3.7'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
+  ruby "2.3.1"
+  gem 'rails_12factor', group: :production
+  gem 'pg'
 gem 'firebase', '~> 0.2.6'
 gem 'payfort_start', require: 'start'
 group :development, :test do
