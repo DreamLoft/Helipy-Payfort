@@ -27,7 +27,7 @@ class PaymentController < ApplicationController
                             "#{order_id}/payment/paymentId" => paymentid
                         })
 
-                      render json: payment
+                      render json: response
 #                        render json: "success"
                     rescue Start::BankingError => e
                       render json: e
