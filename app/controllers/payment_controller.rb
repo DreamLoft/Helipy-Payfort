@@ -25,7 +25,7 @@ class PaymentController < ApplicationController
                         response= firebase.update('', {
                             "#{order_id}/status" => status,
                             "#{order_id}/payment/transactions/#{paymentid}/amount" => total_amount/100,
-                            "paid"=> total_amount
+                            "#{order_id}/payment/paid"=> total_amount
                         })
 
                       render json: ({status: 200})
