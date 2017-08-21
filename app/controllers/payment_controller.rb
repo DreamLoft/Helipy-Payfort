@@ -22,10 +22,14 @@ class PaymentController < ApplicationController
                         :description => description
                       )
                         paymentid= payment["id"]
-                        response= firebase.update('', {
+                        
+                        response = firebase.get("#{order_id}/payment/paid")
+                        total= (response.body).to_i
+                        
+                        firebase.update('', {
                             "#{order_id}/status" => status,
                             "#{order_id}/payment/transactions/#{paymentid}/amount" => (total_amount.to_i)/100,
-                            "#{order_id}/payment/paid"=> (total_amount.to_i)/100
+                            "#{order_id}/payment/paid"=> ((total_amount.to_i)/100)+total
                         })
 
                       render json: ({status: 200})
